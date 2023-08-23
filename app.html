@@ -17,6 +17,11 @@
         
         <input type="submit" value="Submit">
     </form>
+    <div>
+        <ul id="details">
+
+        </ul>
+    </div>
     <script>
 
         document.getElementById('form').addEventListener('submit',setLocalData)
@@ -27,6 +32,7 @@
             const name=e.target.name.value;
             const age=document.getElementById('age').value
             const email=document.getElementById('email').value
+            const ulDetails=document.getElementById('details')
 ////Not an effiecient way of storing data
             // localStorage.setItem('name',name);
             // localStorage.setItem('age',age);
@@ -39,7 +45,14 @@
             }
             const stringifiedObject=JSON.stringify(object)
             localStorage.setItem('StringifyObject',stringifiedObject);
-            console.log(stringifiedObject)
+            // console.log(stringifiedObject)
+
+            ////Now showing this details on the screen(you can use innerhtml innertext create an li element and append to ul)
+
+            const li=document.createElement('li');
+            li.innerHTML=`Name: ${object.name} - Age: ${object.age} - Email: ${object.email}`;
+            ulDetails.appendChild(li)
+            // console.log(ulDetails)
 }
     </script>
 </body>
