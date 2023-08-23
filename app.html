@@ -45,7 +45,10 @@
                 email
             }
             const stringifiedObject=JSON.stringify(object)
-            localStorage.setItem('stringifyObject',stringifiedObject);
+
+            //here object.email is used to store multiple data as emails are diffrent for different users
+
+            localStorage.setItem(object.email,stringifiedObject);
             // console.log(stringifiedObject)
 
             ////Now showing this details on the screen(you can use innerhtml innertext create an li element and append to ul)
@@ -60,11 +63,27 @@
             delBtn.onclick=()=>{
                 // delBtn.parentElement.remove();
                 li.remove();
-                localStorage.removeItem("stringifyObject")
+                localStorage.removeItem(object.email)
+
+            }
+            
+            const editBtn=document.createElement('input')
+            editBtn.id='edit'
+            editBtn.type='button'
+            editBtn.value='edit'
+            console.log(editBtn)
+            editBtn.onclick=()=>{
+                // delBtn.parentElement.remove();
+                li.remove();
+                localStorage.removeItem(object.email)
+                document.getElementById('name').value=name;
+                document.getElementById('age').value=age;
+                document.getElementById('email').value=email;
 
             }
             
             li.appendChild(delBtn)
+            li.appendChild(editBtn)
             ulDetails.appendChild(li)
 
             
