@@ -23,18 +23,24 @@
         
         function setLocalData(e){
             e.preventDefault();
-            const name=document.getElementById('name').value
+            // const name=document.getElementById('name').value
+            const name=e.target.name.value;
             const age=document.getElementById('age').value
             const email=document.getElementById('email').value
-            // console.log(2)
-            // console.log(name)
-            localStorage.setItem('name',name);
-            localStorage.setItem('age',age);
-            localStorage.setItem('email',email);
-        }
-
-
-        // localStorage.setItem('Name',)
+////Not an effiecient way of storing data
+            // localStorage.setItem('name',name);
+            // localStorage.setItem('age',age);
+            // localStorage.setItem('email',email);
+////efficient way is to store using objects but as local storage supports only string data we have to first JSON.stringify object to store in local storage
+            const object={
+                name,
+                age,
+                email
+            }
+            const stringifiedObject=JSON.stringify(object)
+            localStorage.setItem('StringifyObject',stringifiedObject);
+            console.log(stringifiedObject)
+}
     </script>
 </body>
 </html>
