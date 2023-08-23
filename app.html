@@ -58,21 +58,15 @@
             delBtn.value='delete'
             console.log(delBtn)
             delBtn.onclick=()=>{
-                delBtn.parentElement.remove();
+                // delBtn.parentElement.remove();
+                li.remove();
                 localStorage.removeItem("stringifyObject")
 
             }
             
             li.appendChild(delBtn)
             ulDetails.appendChild(li)
-            // console.log(ulDetails)
 
-            // delbtn.addEventListener('click',deleteItem)
-
-            // function deleteItem(e){
-            //     delBtn.parentElement.remove();
-            //     localStorage.remove(stringifiedObject)
-            // }
             
 }
     </script>
