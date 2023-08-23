@@ -1,0 +1,345 @@
+<script src="index.js"></script>
+<script>
+    console.time('st')
+    const jsonDATA=[
+  {
+    "_id": "64e5b32b78857b8e9f7d512d",
+    "index": 0,
+    "guid": "4da5510e-fe4c-4774-b18f-991afe64fe4f",
+    "isActive": false,
+    "balance": "$1,354.79",
+    "picture": "http://placehold.it/32x32",
+    "age": 21,
+    "eyeColor": "blue",
+    "name": "Heath Knox",
+    "gender": "male",
+    "company": "PLASTO",
+    "email": "heathknox@plasto.com",
+    "phone": "+1 (999) 579-2227",
+    "address": "480 Brooklyn Avenue, Clinton, New Mexico, 2638",
+    "about": "Magna culpa aliqua cupidatat culpa tempor veniam ex cupidatat ea excepteur est nostrud ex. Sunt in sunt duis duis. Lorem non ex magna irure fugiat. Lorem cillum Lorem quis ullamco proident laborum incididunt et. Nisi ex in proident et nostrud veniam officia Lorem duis.\r\n",
+    "registered": "2018-05-13T01:54:34 -06:-30",
+    "latitude": -34.676276,
+    "longitude": -46.976879,
+    "tags": [
+      "aliqua",
+      "fugiat",
+      "sunt",
+      "ex",
+      "veniam",
+      "cupidatat",
+      "pariatur"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Shelton Mcguire"
+      },
+      {
+        "id": 1,
+        "name": "Kirkland Fox"
+      },
+      {
+        "id": 2,
+        "name": "Monique Vance"
+      }
+    ],
+    "greeting": "Hello, Heath Knox! You have 1 unread messages.",
+    "favoriteFruit": "apple"
+  },
+  {
+    "_id": "64e5b32b115df472b25140f9",
+    "index": 1,
+    "guid": "1ef6938e-28c0-4d8b-bbe2-04dd8ffbede5",
+    "isActive": false,
+    "balance": "$1,405.09",
+    "picture": "http://placehold.it/32x32",
+    "age": 32,
+    "eyeColor": "green",
+    "name": "Mosley Finley",
+    "gender": "male",
+    "company": "BIOHAB",
+    "email": "mosleyfinley@biohab.com",
+    "phone": "+1 (896) 421-3979",
+    "address": "574 Beayer Place, Coloma, Guam, 8711",
+    "about": "Dolore laborum sunt ullamco veniam laborum non velit ipsum est consequat esse dolore mollit do. Ullamco in consequat cillum et. Quis ipsum Lorem magna proident nulla magna eu nisi reprehenderit esse velit elit. Anim sit sunt sit irure. Irure duis nisi laborum tempor officia est exercitation.\r\n",
+    "registered": "2019-11-17T03:08:55 -06:-30",
+    "latitude": -4.120247,
+    "longitude": 93.52224,
+    "tags": [
+      "nulla",
+      "amet",
+      "laborum",
+      "incididunt",
+      "laboris",
+      "id",
+      "sit"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Margarita Wiley"
+      },
+      {
+        "id": 1,
+        "name": "Gabrielle Holt"
+      },
+      {
+        "id": 2,
+        "name": "Whitehead Jennings"
+      }
+    ],
+    "greeting": "Hello, Mosley Finley! You have 6 unread messages.",
+    "favoriteFruit": "apple"
+  },
+  {
+    "_id": "64e5b32b7d9d2383e7a748d7",
+    "index": 2,
+    "guid": "b6cb42d1-97f8-48a2-b901-40bde018b878",
+    "isActive": false,
+    "balance": "$2,167.62",
+    "picture": "http://placehold.it/32x32",
+    "age": 34,
+    "eyeColor": "blue",
+    "name": "Jackie Holder",
+    "gender": "female",
+    "company": "RUBADUB",
+    "email": "jackieholder@rubadub.com",
+    "phone": "+1 (850) 600-2307",
+    "address": "737 Ridge Boulevard, Tuskahoma, Iowa, 8927",
+    "about": "Irure duis commodo commodo adipisicing est magna irure qui sint. Voluptate consectetur dolore et quis. Sunt velit reprehenderit anim sit veniam ea nulla enim qui aliquip.\r\n",
+    "registered": "2021-09-19T06:56:09 -06:-30",
+    "latitude": -45.279294,
+    "longitude": -35.270853,
+    "tags": [
+      "commodo",
+      "reprehenderit",
+      "reprehenderit",
+      "aute",
+      "ex",
+      "enim",
+      "adipisicing"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Walton Mcclain"
+      },
+      {
+        "id": 1,
+        "name": "Phoebe Levine"
+      },
+      {
+        "id": 2,
+        "name": "Kaufman Goff"
+      }
+    ],
+    "greeting": "Hello, Jackie Holder! You have 7 unread messages.",
+    "favoriteFruit": "banana"
+  },
+  {
+    "_id": "64e5b32bb1babf52898f0324",
+    "index": 3,
+    "guid": "f8177bef-1d92-495c-98a8-d0f7967b0257",
+    "isActive": true,
+    "balance": "$1,705.63",
+    "picture": "http://placehold.it/32x32",
+    "age": 39,
+    "eyeColor": "green",
+    "name": "Owen Clemons",
+    "gender": "male",
+    "company": "ATOMICA",
+    "email": "owenclemons@atomica.com",
+    "phone": "+1 (847) 576-3282",
+    "address": "589 Falmouth Street, Gibbsville, Washington, 3643",
+    "about": "Quis ut do commodo quis magna duis deserunt esse duis. Deserunt sit labore minim sint id labore ea cupidatat dolor aute. Laborum eiusmod proident enim ipsum culpa minim elit id ea do exercitation dolore esse. Ex reprehenderit cupidatat cupidatat nulla sit tempor laboris aute reprehenderit ullamco cupidatat commodo magna. Mollit esse Lorem amet consectetur ex exercitation pariatur.\r\n",
+    "registered": "2015-05-14T06:55:34 -06:-30",
+    "latitude": 25.219701,
+    "longitude": -127.318127,
+    "tags": [
+      "nisi",
+      "elit",
+      "voluptate",
+      "nostrud",
+      "ut",
+      "aliquip",
+      "adipisicing"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Huff Stevens"
+      },
+      {
+        "id": 1,
+        "name": "Susana Knapp"
+      },
+      {
+        "id": 2,
+        "name": "Kayla Hester"
+      }
+    ],
+    "greeting": "Hello, Owen Clemons! You have 1 unread messages.",
+    "favoriteFruit": "apple"
+  },
+  {
+    "_id": "64e5b32b62afab9404cfd1e1",
+    "index": 4,
+    "guid": "1ca9ca6c-d9be-4f6e-8655-5098096d6b85",
+    "isActive": false,
+    "balance": "$1,793.16",
+    "picture": "http://placehold.it/32x32",
+    "age": 37,
+    "eyeColor": "brown",
+    "name": "Cain Curry",
+    "gender": "male",
+    "company": "EARTHWAX",
+    "email": "caincurry@earthwax.com",
+    "phone": "+1 (996) 476-3743",
+    "address": "604 Canal Avenue, Jacksonburg, West Virginia, 9132",
+    "about": "Enim officia deserunt et eiusmod dolor proident dolore pariatur cupidatat labore dolor incididunt sunt eu. Consectetur incididunt ipsum est reprehenderit consectetur dolore eiusmod consectetur incididunt minim tempor est labore duis. Sint mollit elit tempor sit magna amet. Pariatur minim magna minim id reprehenderit id amet consequat proident laboris tempor consequat id consectetur. Duis id deserunt incididunt eu. Labore ea pariatur in ut magna in veniam esse reprehenderit.\r\n",
+    "registered": "2018-12-15T03:18:42 -06:-30",
+    "latitude": 6.680091,
+    "longitude": 176.236323,
+    "tags": [
+      "excepteur",
+      "fugiat",
+      "ullamco",
+      "sit",
+      "in",
+      "ad",
+      "consectetur"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Angelia Hardy"
+      },
+      {
+        "id": 1,
+        "name": "Kathrine Hale"
+      },
+      {
+        "id": 2,
+        "name": "Wilson Hebert"
+      }
+    ],
+    "greeting": "Hello, Cain Curry! You have 6 unread messages.",
+    "favoriteFruit": "banana"
+  },
+  {
+    "_id": "64e5b32bf835320e7b85d08a",
+    "index": 5,
+    "guid": "95519212-2e72-49dd-a26b-173a15251e1e",
+    "isActive": true,
+    "balance": "$3,196.76",
+    "picture": "http://placehold.it/32x32",
+    "age": 26,
+    "eyeColor": "green",
+    "name": "Ava Porter",
+    "gender": "female",
+    "company": "IMMUNICS",
+    "email": "avaporter@immunics.com",
+    "phone": "+1 (904) 543-2210",
+    "address": "912 Cobek Court, Beaverdale, Indiana, 4152",
+    "about": "Enim consectetur duis enim aliquip labore nulla voluptate aute. Est eiusmod commodo sint dolore dolor. Esse culpa ex officia eu ut. Id in id consectetur nulla eiusmod aliqua. Dolor consequat reprehenderit eu cupidatat mollit do eiusmod fugiat magna aliqua in ex.\r\n",
+    "registered": "2020-02-28T01:07:08 -06:-30",
+    "latitude": -33.461618,
+    "longitude": 11.357051,
+    "tags": [
+      "velit",
+      "ad",
+      "exercitation",
+      "deserunt",
+      "consectetur",
+      "quis",
+      "non"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Fannie Daniel"
+      },
+      {
+        "id": 1,
+        "name": "Hampton Travis"
+      },
+      {
+        "id": 2,
+        "name": "Marcia Padilla"
+      }
+    ],
+    "greeting": "Hello, Ava Porter! You have 4 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "64e5b32b9a833102da4b6c03",
+    "index": 6,
+    "guid": "fe3dda93-2888-4dfc-921a-573e1f32f816",
+    "isActive": false,
+    "balance": "$1,729.50",
+    "picture": "http://placehold.it/32x32",
+    "age": 24,
+    "eyeColor": "brown",
+    "name": "Carissa Ewing",
+    "gender": "female",
+    "company": "CINESANCT",
+    "email": "carissaewing@cinesanct.com",
+    "phone": "+1 (887) 549-3468",
+    "address": "618 Ford Street, Dixonville, Nevada, 1824",
+    "about": "Cupidatat ea excepteur enim excepteur et esse irure ea officia veniam dolore minim. Ullamco non Lorem anim in nostrud do occaecat esse excepteur exercitation officia consequat cupidatat elit. Tempor officia tempor dolor eu incididunt deserunt esse ipsum in quis ad sunt qui. Sit excepteur exercitation velit enim qui est reprehenderit est culpa laborum enim nisi. Minim anim minim nisi culpa enim irure qui Lorem ullamco aliqua est commodo laborum. Lorem veniam in magna laboris in aliquip enim nostrud irure in reprehenderit laborum. Ea in cillum est eiusmod quis proident deserunt et irure.\r\n",
+    "registered": "2014-06-03T03:02:45 -06:-30",
+    "latitude": -3.946002,
+    "longitude": -92.317717,
+    "tags": [
+      "consequat",
+      "ullamco",
+      "cupidatat",
+      "laboris",
+      "laboris",
+      "non",
+      "ea"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Lori Glass"
+      },
+      {
+        "id": 1,
+        "name": "Samantha Baird"
+      },
+      {
+        "id": 2,
+        "name": "Estelle Banks"
+      }
+    ],
+    "greeting": "Hello, Carissa Ewing! You have 4 unread messages.",
+    "favoriteFruit": "strawberry"
+  }
+]
+
+console.table(jsonDATA,['age','name'])
+setTimeout(() => {
+    console.timeEnd('st')
+}, 2000);
+
+////used to calculate time to execute
+// console.time('st')
+// setTimeout(() => {
+//     console.timeEnd('st')
+// }, 2000);
+
+// const arr=[1,2,3]//length 3 but after pushing one more element it show 4element also for this line
+// console.log(arr);
+// arr.push(4)
+// console.log(arr)
+
+
+////This will show the exact length of the array as this makes copy of array
+
+const arr=[1,2,3]
+console.log(JSON.parse(JSON.stringify(arr)))
+arr.push(4)
+console.log(JSON.parse(JSON.stringify(arr)));
+</script>
