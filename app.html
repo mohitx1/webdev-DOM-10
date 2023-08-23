@@ -19,6 +19,7 @@
     </form>
     <div>
         <ul id="details">
+            <!-- <li>Name <button>delete</button></li> -->
 
         </ul>
     </div>
@@ -44,15 +45,35 @@
                 email
             }
             const stringifiedObject=JSON.stringify(object)
-            localStorage.setItem('StringifyObject',stringifiedObject);
+            localStorage.setItem('stringifyObject',stringifiedObject);
             // console.log(stringifiedObject)
 
             ////Now showing this details on the screen(you can use innerhtml innertext create an li element and append to ul)
 
             const li=document.createElement('li');
             li.innerHTML=`Name: ${object.name} - Age: ${object.age} - Email: ${object.email}`;
+            const delBtn=document.createElement('input')
+            delBtn.id='delete'
+            delBtn.type='button'
+            delBtn.value='delete'
+            console.log(delBtn)
+            delBtn.onclick=()=>{
+                delBtn.parentElement.remove();
+                localStorage.removeItem("stringifyObject")
+
+            }
+            
+            li.appendChild(delBtn)
             ulDetails.appendChild(li)
             // console.log(ulDetails)
+
+            // delbtn.addEventListener('click',deleteItem)
+
+            // function deleteItem(e){
+            //     delBtn.parentElement.remove();
+            //     localStorage.remove(stringifiedObject)
+            // }
+            
 }
     </script>
 </body>
