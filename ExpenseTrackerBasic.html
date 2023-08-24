@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+    <form id="form">
+        <label for="expense">ExpenseAmount:</label>
+        <input type="number" id="expense" >
+        
+        <label for="description">Description:</label>
+        <input type="text" id="description" >
+
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="Food">Food</option>
+            <option value="Travel">Travel</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Utilities">Utilities</option>
+        </select>
+        
+        <input type="submit" value="Add Expense">
+    </form>
+    <div>
+        <ul id="details">
+
+        </ul>
+    </div>
+    <script>
+
+        document.getElementById('form').addEventListener('submit',setLocalData)
+        
+        function setLocalData(e){
+            e.preventDefault();
+
+            const expense=e.target.expense.value;
+            const description=document.getElementById('description').value
+            const category=document.getElementById('category').value
+
+            const ulDetails=document.getElementById('details')
+
+            const object={
+                expense,
+                description,
+                category
+            }
+            const stringifiedObject=JSON.stringify(object)
+
+
+            localStorage.setItem(`${category}-${description}-${expense}`,stringifiedObject);
+
+
+            const li=document.createElement('li');
+            li.innerHTML=`Expense Amount: ${object.expense} -> Description: ${object.description} -> Category: ${object.category}`;
+            const delBtn=document.createElement('input')
+            delBtn.id='delete'
+            delBtn.type='button'
+            delBtn.value='delete'
+            console.log(delBtn)
+            delBtn.onclick=()=>{
+                li.remove();
+                localStorage.removeItem(`${category}-${description}-${expense}`)
+
+            }
+            
+            const editBtn=document.createElement('input')
+            editBtn.id='edit'
+            editBtn.type='button'
+            editBtn.value='edit'
+            console.log(editBtn)
+            editBtn.onclick=(e)=>{
+                li.remove();
+                localStorage.removeItem(`${category}-${description}-${expense}`)
+                document.getElementById('expense').value=object.expense;
+                document.getElementById('description').value=object.description;
+                document.getElementById('category').value=object.category;
+
+            }
+            
+            li.appendChild(delBtn)
+            li.appendChild(editBtn)
+            ulDetails.appendChild(li)
+
+            
+}
+    </script>
+</body>
+</html>
